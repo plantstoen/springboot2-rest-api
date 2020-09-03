@@ -1,0 +1,20 @@
+server:
+  port: 8080
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /testdb
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:~/home/plantstoen/test_db
+    username: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties.hibernate.hbm2ddl.auto: update
+    showSql: true
+  messages:
+    basename: i18n/exception
+    encoding: UTF-8
+  jwt:
+    secret: MOONSHOT
